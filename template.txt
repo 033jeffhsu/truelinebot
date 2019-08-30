@@ -1,0 +1,83 @@
+BubbleContainer(
+                        direction='ltr',
+                        header=BoxComponent(
+                            layout='vertical',
+                            contents=[TextComponent(text='', align='center')
+                            ]
+                        ),
+                        hero=ImageComponent(url='',size='full',margin='md',aspect_ratio='16:9',aspect_mode='cover'),
+                        body=BoxComponent(layout='horizontal',spacing='md',
+                            contents=[
+                                BoxComponent(layout='vertical',flex=0,
+                                    contents=[
+                                        TextComponent(text='寶具',weight='bold'),
+                                        ImageComponent(url='',align='start',size='xs'),
+                                        TextComponent(text='保有技能',weight='bold'),
+                                        ImageComponent(url='',align='start',size='xs'),
+                                        ImageComponent(url='',margin='xxl',size='xs',align='start'),
+                                        ImageComponent(url='',margin='xxl',size='xs',align='start'),
+                                        TextComponent(text='職階技能',weight='bold'),
+                                        ImageComponent(url='',margin='xxl',size='xs', align='start',),
+                                        ImageComponent(url='',margin='xxl',size='xs', align='start',)
+                                    ]
+                                ),
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #np
+                                        TextComponent(text='',size='xs', weight='bold', color=''),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 1
+                                        TextComponent(text='',size='xs', weight='bold'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 2
+                                        TextComponent(text='',size='xs', weight='bold'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 3
+                                        TextComponent(text='',size='xs', weight='bold'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        TextComponent(text='',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xs', color='#FFFFFF'),
+                                        TextComponent(text='',size='xs', weight='bold'),
+                                        TextComponent(text='',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xs', color='#FFFFFF'),
+                                        TextComponent(text='',size='xs', weight='bold'),
+                                        TextComponent(text='',size='xs'),
+                                    ]
+                                )
+                            ]
+                        ),
+                        footer=BoxComponent(
+                            layout='horizontal',
+                            contents=[
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        TextComponent(text='技能優先度 :',weight='bold'),
+                                        TextComponent(text='強化前 : 1 = 2 > 3'),
+                                        TextComponent(text='強化後 : 3 > 1 = 2'),
+                                        TextComponent(text='簡評 :', weight='bold',),
+                                        #16 char per line
+                                    ]
+                                )
+                             ]
+                         )
+                 )
+                 message = FlexSendMessage(alt_text=text, contents=bubble)
+                 line_bot_api.reply_message(event.reply_token, message)
