@@ -1039,6 +1039,90 @@ def callback():
                 message = FlexSendMessage(alt_text=text, contents=bubble)
                 line_bot_api.reply_message(event.reply_token, message)
             #Okita(Saber)
+            elif text == '11':
+                bubble = BubbleContainer(
+                        direction='ltr',
+                        header=BoxComponent(
+                            layout='vertical',
+                            contents=[TextComponent(text='沖田總司', align='center')
+                            ]
+                        ),
+                        hero=ImageComponent(url='https://images7.alphacoders.com/753/thumb-1920-753592.png',size='full',margin='md',aspect_ratio='16:9',aspect_mode='cover'),
+                        body=BoxComponent(layout='horizontal',spacing='md',
+                            contents=[
+                                BoxComponent(layout='vertical',flex=0,
+                                    contents=[
+                                        TextComponent(text='寶具',weight='bold'),
+                                        ImageComponent(url='https://vignette.wikia.nocookie.net/fategrandorder/images/8/84/Quick.png/revision/latest?cb=20151024070603',align='start',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='sm', color='#FFFFFF'),
+                                        TextComponent(text='保有技能',weight='bold'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_304.png',align='start',size='xs'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_311.png',margin='xxl',size='xs',align='start'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_402.png',margin='xxl',size='xs',align='start'),
+                                        TextComponent(text='職階技能',weight='bold',margin='xxl'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_100.png',size='xs', align='start',),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_102.png',margin='xxl',size='xs', align='start',)
+                                    ]
+                                ),
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #np
+                                        TextComponent(text='無明三段突き',size='xs', weight='bold', color='#00FF32'),
+                                        TextComponent(text='對敵單體強力攻擊1200-2000%',size='xs'),
+                                        TextComponent(text='┗無視防禦力提升效果',size='xs'),
+                                        TextComponent(text='防禦力下降(3回合)30-50%',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 1
+                                        TextComponent(text='縮地 B',size='xs', weight='bold'),
+                                        TextComponent(text='自身的Q卡性能提升30-50%',size='xs'),
+                                        TextComponent(text='1回合',size='xs'),
+                                        TextComponent(text='CD 7 ~ 5',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 2
+                                        TextComponent(text='病弱 A',size='xs', weight='bold'),
+                                        TextComponent(text='星星集中度大提升500-1000%',size='xs'),
+                                        TextComponent(text='1回合',size='xs'),
+                                        TextComponent(text='CD 7 ~ 5',size='xs'),
+                                        SeparatorComponent(margin='lg', color='#FFFFFF'),
+                                        #skill 3
+                                        TextComponent(text='心眼（偽） A',size='xs', weight='bold'),
+                                        TextComponent(text='自身賦予迴避狀態(1回合)',size='xs'),
+                                        TextComponent(text='爆擊威力提升20-40%(3回合)',size='xs'),
+                                        TextComponent(text='CD 8 ~ 6',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='lg', color='#FFFFFF'),
+                                        TextComponent(text='対魔力 E',size='xs', weight='bold'),
+                                        TextComponent(text='自身的弱體耐性提升10%',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xs', color='#FFFFFF'),
+                                        TextComponent(text='騎乗 E',size='xs', weight='bold'),
+                                        TextComponent(text='自身的Q卡性能提升2%',size='xs'),
+                                    ]
+                                )
+                            ]
+                        ),
+                        footer=BoxComponent(
+                            layout='horizontal',
+                            contents=[
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        TextComponent(text='技能優先度 :',weight='bold'),
+                                        TextComponent(text='強化前 : 1 = 3 > 2'),
+                                        TextComponent(text='簡評 :', weight='bold',),
+                                        #16 char per line
+                                    ]
+                                )
+                             ]
+                         )
+                 )
+                message = FlexSendMessage(alt_text=text, contents=bubble)
+                line_bot_api.reply_message(event.reply_token, message)
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text='查無此從者'))
         if not isinstance(event, MessageEvent):

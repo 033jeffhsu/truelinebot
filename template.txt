@@ -12,12 +12,14 @@ BubbleContainer(
                                     contents=[
                                         TextComponent(text='寶具',weight='bold'),
                                         ImageComponent(url='',align='start',size='xs'),
+										SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
                                         TextComponent(text='保有技能',weight='bold'),
                                         ImageComponent(url='',align='start',size='xs'),
                                         ImageComponent(url='',margin='xxl',size='xs',align='start'),
                                         ImageComponent(url='',margin='xxl',size='xs',align='start'),
-                                        TextComponent(text='職階技能',weight='bold'),
-                                        ImageComponent(url='',margin='xxl',size='xs', align='start',),
+                                        TextComponent(text='職階技能',weight='bold',margin='xxl'),
+                                        ImageComponent(url='',size='xs', align='start',),
                                         ImageComponent(url='',margin='xxl',size='xs', align='start',)
                                     ]
                                 ),
