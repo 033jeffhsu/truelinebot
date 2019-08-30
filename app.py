@@ -105,8 +105,6 @@ def callback():
             elif text == '推':
                 print(list)
                 line_bot_api.multicast(list, TextSendMessage(text='fadachai'))
-                    
-              #  line_bot_api.multicast(list, TextSendMessage(text='fadachai'))
             #arutoria penderagon(saber)
             elif text == '1':
                 bubble = BubbleContainer(
@@ -861,8 +859,185 @@ def callback():
                 message = FlexSendMessage(alt_text=text, contents=bubble)
                 line_bot_api.reply_message(event.reply_token, message)
             #Tamamo no mae
+            elif text == '9':
+                bubble = BubbleContainer(
+                        direction='ltr',
+                        header=BoxComponent(
+                            layout='vertical',
+                            contents=[TextComponent(text='玉藻前', align='center')
+                            ]
+                        ),
+                        hero=ImageComponent(url='https://images3.alphacoders.com/707/thumb-1920-707594.jpg',size='full',margin='md',aspect_ratio='16:9',aspect_mode='cover'),
+                        body=BoxComponent(layout='horizontal',spacing='md',
+                            contents=[
+                                BoxComponent(layout='vertical',flex=0,
+                                    contents=[
+                                        TextComponent(text='寶具',weight='bold'),
+                                        ImageComponent(url='https://vignette.wikia.nocookie.net/fategrandorder/images/9/95/Arts.png/revision/latest?cb=20151024070603',align='start',size='xs'),
+                                        TextComponent(text='保有技能',weight='bold'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_513.png',align='start',size='xs'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_513.png',margin='xxl',size='xs',align='start'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_400.png',margin='xxl',size='xs',align='start'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_305.png',margin='xxl',size='xs',align='start'),
+                                        TextComponent(text='職階技能',weight='bold',margin='xxl'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_104.png',size='xs', align='start',),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_326.png',margin='xxl',size='xs', align='start',)
+                                    ]
+                                ),
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #np
+                                        TextComponent(text='水天日光天照八野鎮石',size='xs', weight='bold', color='#007AFF'),
+                                        TextComponent(text='我方全體技能CD減少1回合',size='xs'),
+                                        TextComponent(text='HP回復1000-2000',size='xs'),
+                                        TextComponent(text='┗2000-3000(強化後)',size='xs'),
+                                        TextComponent(text='NP增加20-50%',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        TextComponent(text='呪術 EX',size='xs', weight='bold'),
+                                        TextComponent(text='敵單體氣格機率減少1格',size='xs'),
+                                        TextComponent(text='┗80-100%',size='xs'),
+                                        TextComponent(text='CD 7 - 5',size='xs'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        #skill 1
+                                        TextComponent(text='呪層・廣日照 A',size='xs', weight='bold'),
+                                        TextComponent(text='自身外我方全體的寶具威力提升',size='xs'),
+                                        TextComponent(text='┗20-30%',size='xs'),
+                                        TextComponent(text='┗3回合',size='xs'),
+                                        SeparatorComponent(margin='lg', color='#FFFFFF'),
+                                        #skill 2
+                                        TextComponent(text='変化 A',size='xs', weight='bold'),
+                                        TextComponent(text='防禦力大提升30%(1回合)',size='xs'),
+                                        TextComponent(text='防禦力提升10-30%(3回合)',size='xs'),
+                                        TextComponent(text='CD 7 - 5',size='xs'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        #skill 3
+                                        TextComponent(text='狐の嫁入り EX',size='xs', weight='bold'),
+                                        TextComponent(text='我方單體A卡性能提升30-50%',size='xs'),
+                                        TextComponent(text='┗3回合',size='xs'),
+                                        TextComponent(text='HP回復1000-2500(強化後)',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        TextComponent(text='陣地作成 C',size='xs', weight='bold'),
+                                        TextComponent(text='自身A卡性能提升6%',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xs', color='#FFFFFF'),
+                                        TextComponent(text='神性 A',size='xs', weight='bold'),
+                                        TextComponent(text='自身賦予傷害加成狀態200',size='xs'),
+                                    ]
+                                )
+                            ]
+                        ),
+                        footer=BoxComponent(
+                            layout='horizontal',
+                            contents=[
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        TextComponent(text='技能優先度 :',weight='bold'),
+                                        TextComponent(text='強化前 : 3 > 1 = 2'),
+                                        TextComponent(text='強化後 : 3 > 1 > 2'),
+                                        TextComponent(text='簡評 :', weight='bold',),
+                                        #16 char per line
+                                    ]
+                                )
+                             ]
+                         )
+                 )
+                message = FlexSendMessage(alt_text=text, contents=bubble)
+                line_bot_api.reply_message(event.reply_token, message)
             #Drake
-            
+            elif text == '10':
+                bubble = BubbleContainer(
+                        direction='ltr',
+                        header=BoxComponent(
+                            layout='vertical',
+                            contents=[TextComponent(text='弗朗西斯・德雷克', align='center')
+                            ]
+                        ),
+                        hero=ImageComponent(url='https://i.pinimg.com/originals/74/7f/b4/747fb498ba0718579544c0be255020ae.png',size='full',margin='md',aspect_ratio='16:9',aspect_mode='cover'),
+                        body=BoxComponent(layout='horizontal',spacing='md',
+                            contents=[
+                                BoxComponent(layout='vertical',flex=0,
+                                    contents=[
+                                        TextComponent(text='寶具',weight='bold'),
+                                        ImageComponent(url='https://vignette.wikia.nocookie.net/fategrandorder/images/6/6e/Buster.png/revision/latest?cb=20151024070603',align='start',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        TextComponent(text='保有技能',weight='bold'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_302.png',align='start',size='xs'),
+                                        SeparatorComponent(margin='md', color='#FFFFFF'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_602.png',margin='xxl',size='xs',align='start'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_601.png',margin='xxl',size='xs',align='start'),
+                                        TextComponent(text='職階技能',weight='bold',margin='xxl'),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_100.png',size='xs', align='start',),
+                                        ImageComponent(url='https://kazemai.github.io/fgo-vz/common/images/SkillIcon/SkillIcon_102.png',margin='xxl',size='xs', align='start',)
+                                    ]
+                                ),
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #np
+                                        TextComponent(text='黄金鹿と嵐の夜',size='xs', weight='bold', color='#FF0000'),
+                                        TextComponent(text='對敵全體的強力攻擊300-500%',size='xs'),
+                                        TextComponent(text='┗400-600%(強化後)',size='xs'),
+                                        TextComponent(text='星星獲得20-40[OC]',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 1
+                                        TextComponent(text='嵐の航海者 A+',size='xs', weight='bold'),
+                                        TextComponent(text='全體寶具威力提升8.5-17%',size='xs'),
+                                        TextComponent(text='攻擊力提升8.5-17%',size='xs'),
+                                        TextComponent(text='皆持續一回合',size='xs'),
+                                        TextComponent(text='CD 7 ~ 5',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        #skill 2
+                                        TextComponent(text='黄金律 B',size='xs', weight='bold'),
+                                        TextComponent(text='自身的NP獲得量提升18-45%',size='xs'),
+                                        TextComponent(text='3回合',size='xs'),
+                                        TextComponent(text='CD 8 ~ 6',size='xs'),
+                                        SeparatorComponent(margin='sm', color='#FFFFFF'),
+                                        #skill 3
+                                        TextComponent(text='星の開拓者 EX',size='xs', weight='bold'),
+                                        TextComponent(text='自身的NP增加30-50%',size='xs'),
+                                        TextComponent(text='無敵貫通狀態(3回合)',size='xs'),
+                                        TextComponent(text='星星獲得 10',size='xs'),
+                                        TextComponent(text='CD 8 ~ 6',size='xs'),
+                                        SeparatorComponent(margin='xl', color='#FFFFFF'),
+                                        TextComponent(text='対魔力 D',size='xs', weight='bold'),
+                                        TextComponent(text='自身弱體耐性提升12.5%',size='xs'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xxl', color='#FFFFFF'),
+                                        SeparatorComponent(margin='xs', color='#FFFFFF'),
+                                        TextComponent(text='騎乗 B',size='xs', weight='bold'),
+                                        TextComponent(text='自身的Q卡性能提升8%',size='xs'),
+                                    ]
+                                )
+                            ]
+                        ),
+                        footer=BoxComponent(
+                            layout='horizontal',
+                            contents=[
+                                BoxComponent(
+                                    layout='vertical',
+                                    contents=[
+                                        TextComponent(text='技能優先度 :',weight='bold'),
+                                        TextComponent(text='3 > 1 > 2'),
+                                        TextComponent(text='簡評 :', weight='bold',),
+                                        #16 char per line
+                                    ]
+                                )
+                             ]
+                         )
+                 )
+                message = FlexSendMessage(alt_text=text, contents=bubble)
+                line_bot_api.reply_message(event.reply_token, message)
             #Okita(Saber)
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text='查無此從者'))
